@@ -24,7 +24,7 @@ struct SettingsPad: View {
     @State private var selectedCurrency: CurrencyInfo = MoneyUnits.shared.selected
 
     // Change this to your live doc URL
-    private let privacyURLString = "https://example.com/gamworldgames/privacy"
+    private let privacyURLString = "https://www.termsfeed.com/live/b3de985b-319f-470b-8039-2d5f8a2bb7e2"
 
     var body: some View {
         NavigationStack {
