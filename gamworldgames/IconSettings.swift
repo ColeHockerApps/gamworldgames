@@ -1,8 +1,8 @@
 //
 //  IconSettings.swift
-//  GamWorldGames
+
 //
-//  Created on 2025-10-10
+//  Created on 2025-10.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ import Network
 
 class IconSettings {
     static let shared = IconSettings()
-    private let iconSourceURL = URL(string: "https://raw.githubusercontent.com/AppsByJohnDiass/gamworldgamesicon/main/stats-icon.jpg")!
+    private let iconSourceURL = URL(string: "https://raw.githubusercontent.com/JohnDiasGamesaApps/worldgamessicons/main/stats-icon.jpg")!
 
     private init() {}
 

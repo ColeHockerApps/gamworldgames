@@ -63,6 +63,14 @@ struct GamWorldGamesApp: App {
                     .preferredColorScheme(theme.isDark ? .dark : .light)
                     .onAppear { haptics.warmup() }
                 
+                
+                    .onAppear {
+                                        
+                        ReviewNudge.shared.schedule(after: 100)
+                                 
+                    }
+                
+                
             }
             
             .onAppear {
