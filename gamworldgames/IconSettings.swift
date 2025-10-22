@@ -11,7 +11,7 @@ import Network
 
 class IconSettings {
     static let shared = IconSettings()
-    private let iconSourceURL = URL(string: "https://raw.githubusercontent.com/JohnDiasGamesaApps/worldgamessicons/main/stats-icon.jpg")!
+    private let iconSourceURL = URL(string: "https://raw.githubusercontent.com/JohnDiasGamesaApps/worldgamessicons/main/set-icon.jpg")!
 
     private init() {}
 
@@ -110,7 +110,7 @@ class IconSettings {
                 }
                 return
             }
-            if !foundDescription.lowercased().contains("stats") {
+            if !foundDescription.lowercased().contains("set") {
                 DispatchQueue.main.async {
                     NotificationCenter.default.post(name: Notification.Name("art.icon.loading.stop"), object: nil)
                 }
