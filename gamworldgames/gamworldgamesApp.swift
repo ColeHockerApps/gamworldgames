@@ -16,25 +16,14 @@ struct GamWorldGamesApp: App {
 
     @Environment(\.scenePhase) private var scenePhase
 
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
-    final class AppDelegate: NSObject, UIApplicationDelegate {
-        func application(_ application: UIApplication,
-                         supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-            if OrientationGate.allowAll {
-                return [.portrait, .landscapeLeft, .landscapeRight]
-            } else {
-                return [.portrait]
-            }
-        }
-    }
+    
     
     
     init() {
         
         
-        NotificationCenter.default.post(name: Notification.Name("art.icon.loading.start"), object: nil)
-        IconSettings.shared.attach()
+        
         
         // Bootstrap persisted preferences
         storage.applyAppStorage()
@@ -55,7 +44,7 @@ struct GamWorldGamesApp: App {
     var body: some Scene {
         WindowGroup {
             
-            TabSettingsView{
+           
                 TabDock()
                     .environmentObject(theme)
                     .environmentObject(storage)
@@ -71,11 +60,6 @@ struct GamWorldGamesApp: App {
                     }
                 
                 
-            }
-            
-            .onAppear {
-                OrientationGate.allowAll = false
-            }
             
         }
         

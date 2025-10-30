@@ -14,7 +14,7 @@ struct TabDock: View {
     @State private var selection: Tab = .home
 
     enum Tab: Hashable {
-        case home, sessions, live, stats, settings
+        case home, sessions, live, stats //settings
     }
 
     var body: some View {
@@ -59,15 +59,15 @@ struct TabDock: View {
             .tabItem { GlyphPack.tabStats(); Text("Stats") }
             .tag(Tab.stats)
 
-            NavigationStack {
-                SettingsPad()
-                    .navigationTitle("Settings")
-                    .background(
-                        Rectangle().fill(theme.arenaBackground).ignoresSafeArea()
-                    )
-            }
-            .tabItem { GlyphPack.tabSettings(); Text("Settings") }
-            .tag(Tab.settings)
+//            NavigationStack {
+//                SettingsPad()
+//                    .navigationTitle("Settings")
+//                    .background(
+//                        Rectangle().fill(theme.arenaBackground).ignoresSafeArea()
+//                    )
+//            }
+//            .tabItem { GlyphPack.tabSettings(); Text("Settings") }
+//            .tag(Tab.settings)
         }
         .tint(theme.accentColor)
         .onChange(of: selection) { _ in haptics.selection() }
