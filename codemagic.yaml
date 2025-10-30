@@ -12,14 +12,14 @@ workflows:
       xcode: latest
       ios_signing: 
         distribution_type: app_store
-        bundle_identifier: com.joandias.worldgamesapp
+        bundle_identifier: com.joandias.greendockits
       vars:
         # Т.к. CocoaPods = no — используем .xcodeproj:
         XCODE_PROJECT: "gamworldgames.xcodeproj"
         # Если перейдёшь на CocoaPods, вместо PROJECT используй:
         # XCODE_WORKSPACE: "gamworldgames.xcworkspace"
         XCODE_SCHEME: "gamworldgames"
-        APP_STORE_APPLE_ID: 6753873130
+        APP_STORE_APPLE_ID: 6754679964
 
     cache:
       cache_paths:
